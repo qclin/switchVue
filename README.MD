@@ -1,1 +1,1 @@
-![landing Page]("/SwitchVue.png")
+![landing Page](SwitchVue.png)

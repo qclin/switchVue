@@ -1,0 +1,40 @@
+#account{
+  float: right;
+  padding: .5em;
+  border: 1px solid white;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+
+header{
+  background-color: #474e59;
+  box-sizing: border-box;
+  color:white;
+  padding: 2em;
+  width: 100%;
+}
+.filmIcon{
+  font-size: 2em;
+  padding: 0;
+  height: auto;
+}
+
+.movie img{
+  margin:.5em;
+  width: 8em;
+  -webkit-box-shadow: 5px 5px 5px 0px #757575;
+  -moz-box-shadow: 5px 5px 5px 0px #757575;
+      box-shadow: 5px 5px 5px 0px #757575;
+}
+
+ul{
+  margin: auto;
+  width: 75%;
+}
+
+ul li{
+  display: inline-block;
+  color:red;
+}

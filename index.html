@@ -5,8 +5,8 @@
   <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   <link rel = "stylesheet" type = "text/css" href = "styles.css" />
   <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.0/ui-bootstrap-tpls.min.js"></script>
   <script src = "app.js"></script>
 </head>
 
@@ -18,7 +18,30 @@
 
   <ul id = "movieList">
     <h4>Lastest Release</h4>
-    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img></li>
+    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
   </ul>
+
+  <script type = "text/ng-template" id = "selectedMovie.html">
+
+    <section>
+      <div class="modal-header">
+        <nav class="left" ng-click="exit()"> X back to list</nav>
+        <nav class="right" ng-click="next()">next</nav>
+      </div>
+      
+      <div class="modal-body">
+        <h3> {{movie.title}} ({{movie.release_date.substring(0,4)}}) </h3>
+
+        <h4> average rating: {{movie.vote_average}} | #votes: {{movie.vote_count}} | Release date {{movie.release_date}} <h4>
+        {{movie.overview}}
+      </div>
+
+      <div class = "modal-footer">
+      </div>
+    </section>
+
+  </script>
+
+
 </body>
 </html>

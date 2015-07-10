@@ -4,17 +4,13 @@ var challenge = angular.module('movieApp', ['ui.bootstrap'])
     var backdropImage = "http://image.tmdb.org/t/p/w1280" + movie.backdrop_path   
      document.getElementById("backdrop").setAttribute("src", backdropImage);
 
-     // var backdrop = document.createElement("img");
-     // backdrop.setAttribute("id", "backdrop"); 
-     // backdrop.setAttribute("src", backdropImage);  
-
-
       $scope.movie = movie; 
       $scope.exit = function(){
         $modalInstance.close();
-        // var element = document.getElementById("backdrop");
-        // element.parentNode.removeChild(element);
-         document.getElementById("backdrop").removeAttribute("src");
+
+        document.getElementById("backdrop").removeAttribute("src");
+        document.getElementById("backdrop").setAttribute("src", "nothing");
+
       }
   })
   .controller('MainCtrl', function($scope, $window, $http, $modal, $log, $timeout){

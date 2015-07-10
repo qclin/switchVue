@@ -21,7 +21,7 @@
     <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
   </ul>
 
-<!--     <pager total-items="totalItems" ng-model="currentPage"></pager> -->
+    <pager total-items="totalItems" ng-model="currentPage"></pager>
 
   <img id = "backdrop"></img>
   <!-- MODAL SECTION -->

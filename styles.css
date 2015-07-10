@@ -4,6 +4,7 @@
   border: 1px solid white;
 }
 #backdrop{
+  left:0;
   top:0;
   position: absolute;
   -webkit-filter: blur(5px);
@@ -22,6 +23,9 @@ header{
   color:white;
   padding: 2em;
   width: 100%;
+}
+h4{
+  margin:0 auto;
 }
 .filmIcon{
   font-size: 2em;

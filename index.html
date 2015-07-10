@@ -12,18 +12,19 @@
 
 <body ng-controller = "MainCtrl">
   <header> 
-    <span id = "logo"> <i class = "filmIcon ion-ios-analytics"> Movies </i>  </i></span> 
+    <span id = "logo"> <i class = "filmIcon ion-ios-analytics"> Movies</i></span> 
     <span id = "account"> My Account <i class = "ion-ios-arrow-down"></i></span>
   </header><br>
 
   <ul id = "movieList">
     <h4>Lastest Release</h4>
-    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
+    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12"> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
+    <br>
+    <a class ="left" id = "prev" ng-click = "prev()"> << prev </a>
+    <a class ="right" id = "next" ng-click = "next()"> next >> </a>
   </ul>
 
-    <pager total-items="totalItems" ng-model="currentPage"></pager>
-
-  <img id = "backdrop"></img>
+ 
   <!-- MODAL SECTION -->
   <script type = "text/ng-template" id = "selectedMovie.html">
 
@@ -46,6 +47,6 @@
 
   </script>
 
-
+ <img id = "backdrop"></img>
 </body>
 </html>

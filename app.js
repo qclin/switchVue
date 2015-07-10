@@ -3,7 +3,7 @@ var challenge = angular.module('movieApp', ['ui.bootstrap'])
   
     var backdropImage = "http://image.tmdb.org/t/p/w1280" + movie.backdrop_path   
      document.getElementById("backdrop").setAttribute("src", backdropImage);
-     
+
      // var backdrop = document.createElement("img");
      // backdrop.setAttribute("id", "backdrop"); 
      // backdrop.setAttribute("src", backdropImage);  
@@ -42,8 +42,4 @@ var challenge = angular.module('movieApp', ['ui.bootstrap'])
       });
 
     };
-
-
-
-
   });

@@ -20,21 +20,23 @@
     <h4>Lastest Release</h4>
     <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
   </ul>
-
+  <img id = "backdrop"></img>
   <!-- MODAL SECTION -->
   <script type = "text/ng-template" id = "selectedMovie.html">
 
     <section>
+
       <div class="modal-header">
         <nav class="left" ng-click="exit()"> X back to list</nav>
         <nav class="right" ng-click="next()">next</nav>
       </div>
       
       <div class="modal-body">
-        <h3> {{movie.title}} ({{movie.release_date.substring(0,4)}}) </h3>
+        <img class = "poster" src = "http://image.tmdb.org/t/p/w300/{{movie.poster_path}}"></img>
+        <p id = "text"> <h3> {{movie.title}} ({{movie.release_date.substring(0,4)}}) </h3>
 
-        <h4> average rating: {{movie.vote_average}} | #votes: {{movie.vote_count}} | Release date {{movie.release_date}} <h4>
-        {{movie.overview}}
+        <h4> average rating: {{movie.vote_average}} | #votes: {{movie.vote_count}} | Release date {{movie.release_date}} </h4>
+        {{movie.overview}} </p> 
       </div>
 
       <div class = "modal-footer">

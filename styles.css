@@ -3,6 +3,16 @@
   padding: .5em;
   border: 1px solid white;
 }
+#backdrop{
+  width: auto;
+  top:0;
+  position: absolute;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
 body{
   font-family: 'Quicksand', sans-serif;
   width: 100%
@@ -22,6 +32,10 @@ header{
 .left{
   float:left;
 }
+.poster{
+  float:left;
+  padding-right: 2em; 
+}
 .modal-backdrop{
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -36,6 +50,7 @@ header{
   -moz-box-shadow: 5px 5px 5px 0px #757575;
       box-shadow: 5px 5px 5px 0px #757575;
 }
+
 .right{
   float:right;
 }
@@ -57,9 +72,12 @@ section > div {
   width: 75%;
   position: relative;
   margin: 5% auto;
-  padding: 3em;
+  padding: 1em;
 }
 
+#text{
+  padding: 2em;
+}
 ul{
   margin: auto;
   width: 75%;

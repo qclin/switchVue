@@ -1,13 +1,20 @@
 var challenge = angular.module('movieApp', ['ui.bootstrap'])
   .controller('ModalCtrl', function($scope, $modalInstance, movie){
+  
+    var backdropImage = "http://image.tmdb.org/t/p/w1280" + movie.backdrop_path   
+     document.getElementById("backdrop").setAttribute("src", backdropImage);
+     
+     // var backdrop = document.createElement("img");
+     // backdrop.setAttribute("id", "backdrop"); 
+     // backdrop.setAttribute("src", backdropImage);  
 
-      var backgroundImage = "url(http://image.tmdb.org/t/p/w1280" + movie.backdrop_path + ") no-repeat"  
-     document.body.style.background = backgroundImage;  
 
       $scope.movie = movie; 
       $scope.exit = function(){
         $modalInstance.close();
-        document.body.style.background = "";
+        // var element = document.getElementById("backdrop");
+        // element.parentNode.removeChild(element);
+         document.getElementById("backdrop").removeAttribute("src");
       }
   })
   .controller('MainCtrl', function($scope, $window, $http, $modal, $log, $timeout){

@@ -21,6 +21,7 @@
     <li class = "movie" ng-repeat = "movie in movies | limitTo: 12 "> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
   </ul>
 
+  <!-- MODAL SECTION -->
   <script type = "text/ng-template" id = "selectedMovie.html">
 
     <section>

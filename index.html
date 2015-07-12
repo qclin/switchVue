@@ -18,13 +18,12 @@
 
   <ul id = "movieList">
     <h4>Lastest Release</h4>
-    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12"> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img> </li>
+    <li class = "movie" ng-repeat = "movie in movies | limitTo: 12"> <div id = "tooltip" tooltip = {{movie.title}} tooltip-trigger = "mouseenter" tooltip-placement = "top" tooltip-enable="!inputModel"> <img ng-click = "open(movie)" src = "http://image.tmdb.org/t/p/w500/{{movie.poster_path}}"></img></div></li>
     <br>
     <a class ="left" id = "prev" ng-click = "prev()"> << prev </a>
     <a class ="right" id = "next" ng-click = "next()"> next >> </a>
   </ul>
 
- 
   <!-- MODAL SECTION -->
   <script type = "text/ng-template" id = "selectedMovie.html">
 

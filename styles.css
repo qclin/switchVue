@@ -81,6 +81,9 @@ section > div {
 #text{
   padding: 2em;
 }
+#tooltip{
+  z-index: 10;
+}
 ul{
   margin: auto;
   width: 75%;
